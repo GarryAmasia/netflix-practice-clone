@@ -1,0 +1,67 @@
+.navbar {
+  color: white;
+  font-style: 14px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: rgba(54, 54, 54, 0.164);
+
+  .container {
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+
+    .left {
+      display: flex;
+      align-items: center;
+      img {
+        height: 45px;
+
+        margin-right: 40px;
+      }
+      span {
+        margin-right: 20px;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      //   span {
+      //     margin: 0 10px;
+      //   }
+      .icon {
+        margin: 0 15px;
+        cursor: pointer;
+      }
+
+      .profile {
+        .options {
+          display: none;
+          border-radius: 5px;
+          background-color: var(--main-color);
+        }
+
+        span {
+          padding: 5px;
+          cursor: pointer;
+        }
+
+        &:hover {
+          .options {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            padding: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
