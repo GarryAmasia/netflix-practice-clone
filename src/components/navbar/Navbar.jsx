@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.scss";
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsIcon from "@mui/icons-material/Notifications";
@@ -6,8 +6,18 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import Face6Icon from "@mui/icons-material/Face6";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  //   console.log(window.pageYOffset);
+
+  window.onscroll = () => {
+    setIsScrolled(window.pageYOffset === 0 ? false : true);
+    // return () => (window.onscroll = null);
+  };
+
+  // console.log(isScrolled);
+
   return (
-    <div className="navbar">
+    <div className={isScrolled ? "navbar scrolled" : "navbar"}>
       <div className="container">
         <div className="left">
           <img
